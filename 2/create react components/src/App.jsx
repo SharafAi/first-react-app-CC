@@ -1,5 +1,6 @@
 import { MvButton } from "./MvButton";
 import Hello from "./Hello";
+import Random from "./Random";
 
 
 function App() {
@@ -8,6 +9,10 @@ function App() {
     hello world 
     </h1>
     <Hello></Hello>
+    <Random></Random>
+    <Random></Random>
+    <Random></Random>
+    <Random></Random>
 </div>
 }
 
