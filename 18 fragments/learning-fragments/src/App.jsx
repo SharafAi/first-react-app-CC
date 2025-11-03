@@ -3,16 +3,15 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
   let FoodItems = ["Milk", "Fish", "Orange", "Meat", "Banana"];
-
-  if (FoodItems.length === 0){
-    return <h3>im still hungry</h3>
-  }
   return (
     <>
       <h1>Healthy Foods</h1>
+      {FoodItems.length === 0 ? <h3>im still hungry</h3> : null}
       <ul className="list-group">
         {FoodItems.map((item) => (
-          <li key={item} className="list-group-item">{item}</li>
+          <li key={item} className="list-group-item">
+            {item}
+          </li>
         ))}
       </ul>
     </>
