@@ -1,0 +1,33 @@
+.heading{
+  margin: 40px;
+  font-weight: 900;
+}
+.Todo-container {
+  text-align: center;
+  font-weight: 900;
+  color: rgb(0, 0, 0);
+}
+
+input{
+  width: 100%;
+  border-radius: 30px;
+  border-width: 5px;
+}
+
+.Todo-container{
+  margin: 100px;
+ 
+
+}
+
+.Items-container {
+  text-align: left;
+}
+
+.css-row{
+  margin: 5px;
+}
+
+.button{
+  width: 100px;
+}
