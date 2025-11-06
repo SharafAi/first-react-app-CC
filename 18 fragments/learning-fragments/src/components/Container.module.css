@@ -1,0 +1,16 @@
+.container {
+  max-width: 600px;                              /* centered and responsive width */
+  margin: 40px auto;                             /* center horizontally with top/bottom space */
+  padding: 24px 28px;                            /* comfortable inner spacing */
+  background: #ffffff;                           /* clean white background */
+  border-radius: 16px;                           /* soft rounded corners */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);    /* soft, natural shadow */
+  border: 1px solid rgba(229, 231, 235, 0.6);    /* subtle border */
+  transition: all 0.3s ease;                     /* smooth hover transitions */
+}
+
+/* Light hover for focus or interaction feedback */
+.container:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}

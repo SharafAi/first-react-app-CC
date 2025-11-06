@@ -1,10 +1,21 @@
 
 
-
-
-.Item-Heading{
+.Item-Heading {
   font-weight: 900;
-  font-family:'Courier New', Courier, monospace;
-  background-color:greenyellow;
+  font-family: 'Courier New', Courier, monospace;
+  background: linear-gradient(135deg, #b2ff59, #76ff03);
+  color: #2e7d32;
+  padding: 12px 16px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  letter-spacing: 0.5px;
+  margin-bottom: 14px;
+  transition: all 0.3s ease;
+}
 
+.Item-Heading:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(135deg, #ccff90, #b2ff59);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
 }
