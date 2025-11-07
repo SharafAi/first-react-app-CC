@@ -1,6 +1,9 @@
-const ErrorMsg = ({items}) => {
+import styles from './ErrorMsg.module.css';
 
-  return <>{items.length === 0 && <h3>im still hungry</h3>}</>;
+
+const ErrorMsg = ({ items }) => {
+
+  return <>{items.length === 0 && <h3 className={styles.ErrMsg}>im still hungry</h3>}</>;
 };
 
 export default ErrorMsg;

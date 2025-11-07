@@ -39,7 +39,8 @@
 }
 
 .buyButton {
-  display: inline-block;
+  float: right;
+  display: flex;
   padding: 10px 22px;
   border: none;
   border-radius: 8px;
