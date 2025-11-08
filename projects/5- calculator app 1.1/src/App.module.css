@@ -1,0 +1,18 @@
+.Calculator {
+  width: 240px;                           /* slightly wider for 3 columns */
+  margin: 40px auto;                      /* center it on the page */
+  padding: 16px;
+  border: 1px solid #e5e7eb;              /* soft gray border instead of black */
+  border-radius: 12px;                    /* smoother, more modern corners */
+  background-color: #f9fafb;              /* subtle off-white background */
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15); /* soft depth */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.2s ease;
+}
+
+.Calculator:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);  /* slight lift on hover */
+  transform: translateY(-2px);
+}

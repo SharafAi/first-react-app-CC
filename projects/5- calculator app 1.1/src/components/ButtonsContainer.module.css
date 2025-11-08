@@ -1,0 +1,55 @@
+.ButtonsContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 buttons per row */
+  gap: 8px;                              /* even spacing between buttons */
+  padding: 12px;
+  max-width: 220px;                      /* keeps it compact like a calculator */
+  margin: 0 auto;
+  justify-items: center;                 /* center buttons horizontally */
+}
+
+/* Base button style */
+.Button {
+  width: 60px;
+  height: 60px;
+  border: none;
+  border-radius: 12px;                   /* smooth, modern corners */
+  background-color: #f3f4f6;             /* light neutral tone */
+  color: #111827;
+  font-size: 1.2rem;
+  font-weight: 600;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+/* Hover and active states */
+.Button:hover {
+  background-color: #e5e7eb;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.Button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+/* Operator and Equal Buttons */
+.Button.operator {
+  background-color: #3b82f6;
+  color: #ffffff;
+}
+
+.Button.operator:hover {
+  background-color: #2563eb;
+}
+
+.Button.equal {
+  background-color: #10b981;
+  color: #ffffff;
+}
+
+.Button.equal:hover {
+  background-color: #059669;
+}

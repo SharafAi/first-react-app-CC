@@ -1,0 +1,15 @@
+.Display {
+  width: 100%;
+  padding: 10px 14px;
+  margin: 10px 0 20px 0;
+  font-size: 28px;
+  font-weight: 600;
+  text-align: right;                          /* align numbers to the right */
+  border: 2px solid #d1d5db;                  /* soft neutral border */
+  border-radius: 8px;                         /* smooth edges */
+  background-color: #ffffff;                  /* clean white display */
+  color: #111827;                             /* high contrast text */
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1); /* inner shadow for depth */
+  overflow: hidden;
+  white-space: nowrap;                        /* prevent text wrapping */
+}
