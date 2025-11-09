@@ -1,34 +1,18 @@
-import { /*useState,*/ useRef } from "react";
+import { useRef } from "react";
 import { IoIosAddCircle } from "react-icons/io";
 import styles from "./AddTodo.module.css";
 
 function AddTodo({ onNewItem }) {
-  //useState not needed after using useRef in this case
-  // const [name, setTodoName] = useState(""); 
-  // const [date, setTodoDate] = useState(""); 
   const todoNameElement = useRef();
   const todoDateElement = useRef();
 
-  // const handleNameChange = (event) => {
-  //   setTodoName(event.target.value);
-  //   noOfUpdates.current += 1;
-  // };
-
-  // const handleDateChange = (event) => {
-  //   setTodoDate(event.target.value);
-  //   console.log(`no of updates are : ${noOfUpdates.current}`);
-  // };
-
-const handleAddButtonClicked = (event) => {
-  const name = todoNameElement.current.value;
-  const date = todoDateElement.current.value;
-  todoNameElement.current.value = "";
-  todoDateElement.current.value = "";
-    // console.log(`${name} due on: ${date}`);
+  const handleAddButtonClicked = (event) => {
+    const name = todoNameElement.current.value;
+    const date = todoDateElement.current.value;
+    todoNameElement.current.value = "";
+    todoDateElement.current.value = "";
     event.preventDefault();
     onNewItem(name, date);
-    // setTodoName("");
-    // setTodoDate("");
   };
 
   return (
@@ -40,8 +24,6 @@ const handleAddButtonClicked = (event) => {
             type="text"
             ref={todoNameElement}
             placeholder="Enter Todo here"
-            // value={name}
-            // onChange={handleNameChange}
           />
         </div>
         <div className="col-4">
@@ -49,8 +31,6 @@ const handleAddButtonClicked = (event) => {
             className={styles.DatePicker}
             type="date"
             ref={todoDateElement}
-            // value={date}
-            // onChange={handleDateChange}
           />
         </div>
         <div className="col-2">
