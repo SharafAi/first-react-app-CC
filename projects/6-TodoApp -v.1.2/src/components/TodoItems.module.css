@@ -1,0 +1,77 @@
+.ItemsContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;                 /* stretch items to full width */
+  gap: 1rem;                            /* spacing between todo items */
+  
+  font-weight: 600;
+  color: #1f2937;                       /* soft dark text */
+  background-color: #f9fafb;            /* clean white background */
+  padding: 2rem;                         /* increased padding for bigger card */
+  border-radius: 12px;                   /* modern soft corners */
+  border: 1px solid #e5e7eb;            /* subtle border */
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);  /* subtle depth */
+  max-width: 700px;                      /* wider card for desktop */
+  margin: 2rem auto;                     /* centered */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Hover effect */
+.ItemsContainer:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
+}
+
+/* Individual Todo Item */
+.TodoItem {
+  display: flex;
+  justify-content: space-between;       /* text left, button right */
+  align-items: center;
+  padding: 0.75rem 1rem;
+  background-color: #ffffff;             /* subtle contrast */
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+  transition: background-color 0.2s ease;
+}
+
+.TodoItem:hover {
+  background-color: #f3f4f6;
+}
+
+/* Todo text */
+.TodoItem span {
+  font-size: 1rem;
+  color: #111827;
+  word-break: break-word;
+  flex: 1;                               /* takes available space */
+  text-align: left;                      /* left-aligned text */
+  margin-right: 1rem;                    /* spacing from button */
+}
+
+/* Delete/Edit button */
+.TodoItem button {
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  border: none;
+  background-color: #ef4444;            /* red delete button */
+  color: #ffffff;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.TodoItem button:hover {
+  background-color: #dc2626;
+  transform: translateY(-1px);
+}
+
+/* Responsive for smaller screens */
+@media (max-width: 768px) {
+  .ItemsContainer {
+    padding: 1.5rem 1rem;
+    max-width: 90%;
+  }
+
+  .TodoItem span {
+    font-size: 0.95rem;
+  }
+}
