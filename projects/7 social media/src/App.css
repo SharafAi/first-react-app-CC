@@ -1,0 +1,132 @@
+/* ========== NAVBAR ========== */
+.Navbar {
+  height: 60px;
+  background: #0d6efd;
+  color: white;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  font-weight: 500;
+  flex-shrink: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+/* ========== LAYOUT ========== */
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+.app-container {
+  display: flex;
+  padding-top: 60px; /* space for fixed navbar */
+  height: 100vh;
+  overflow: hidden;
+}
+
+.sidebar {
+  width: 250px;
+  background-color: #f8f9fa;
+  height: 100vh;
+  border-right: 1px solid #ddd;
+  overflow-y: auto; /* sidebar scrolls only if needed */
+  flex-shrink: 0;
+  position: sticky;
+  top: 60px; /* below navbar */
+}
+
+.content {
+  flex: 1;
+  overflow-y: auto; /* only this area scrolls */
+  background: #fff;
+  padding: 20px;
+  min-height: 100vh;
+}
+
+/* ========== POST CARD ========== */
+.post-card {
+  position: relative;
+  display: block;
+  width: 950px;
+  margin: 20px auto;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  background-color: #fff;
+  transition: box-shadow 0.2s ease;
+}
+
+.post-card:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* Image inside post */
+.post-card img {
+  width: 100%;
+  height: 600px;
+  object-fit: cover;
+  display: block;
+}
+
+/* ========== BUTTONS ========== */
+.LCSbuttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4px 0;
+  margin-top: 4px;
+  border-radius: 0 0 10px 10px;
+}
+
+.LCSbuttons button {
+  background: none;
+  border: none;
+  color: #444;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 10px 18px;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.LCSbuttons button:hover {
+  background-color: #f0f0f0;
+  color: #007bff;
+  transform: translateY(-1px);
+}
+
+.LCSbuttons button:active {
+  transform: scale(0.96);
+  color: #0056b3;
+}
+
+/* ========== TAGS ========== */
+.Hashtag {
+  margin: 0px 3px;
+}
+
+/* ========== DELETE BUTTON ========== */
+.DelButton {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  color: #000;
+  font-size: 22px;
+  cursor: pointer;
+  padding: 0;
+  line-height: 1;
+  z-index: 10;
+  transition: color 0.2s ease;
+}
+
+.DelButton:hover {
+  color: #a71d2a;
+}
