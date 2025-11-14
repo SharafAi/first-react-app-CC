@@ -2,22 +2,17 @@ import { SlLike } from "react-icons/sl";
 import { TfiComment } from "react-icons/tfi";
 import { PiShareFatLight } from "react-icons/pi";
 import { AiFillLike } from "react-icons/ai";
-import { RxCross2 } from "react-icons/rx"; 
+import { RxCross2 } from "react-icons/rx";
 import { PostList } from "../store/PostListStore";
 import { useContext } from "react";
 
-const Post = ({ post}) => {
+const Post = ({ post }) => {
   const { deletePost } = useContext(PostList);
-
-
 
   return (
     <div className="relative post-card bg-white shadow-sm rounded-xl p-4 w-full max-w-sm mx-auto mb-4 border border-gray-200 hover:shadow-lg transition-all duration-200">
       {/* Delete "X" Button */}
-      <button
-        onClick={() => deletePost(post.id)}
-        className = "DelButton"
-      >
+      <button onClick={() => deletePost(post.id)} className="DelButton">
         <RxCross2 />
       </button>
 
@@ -43,13 +38,13 @@ const Post = ({ post}) => {
       <p className="text-[13px] text-gray-700 mb-3 leading-snug">{post.body}</p>
 
       {/* Tags */}
-      <div className="flex flex-wrap gap-2 mb-2">
-        {post.tag.map((tags) => (
+      <div className="flex flex-wrap gap-2 mb-2 ">
+        {(post.tags || post.tag || []).map((t) => (
           <span
-            key={tags}
-            className="badge text-bg-primary Hashtag text-[12px] px-2 py-[4px] rounded-full"
+            key={t}
+            className="bg-blue-100 text-blue-700 text-[12px] px-2 py-[3px] rounded-full"
           >
-            {tags}
+            {t}
           </span>
         ))}
       </div>
@@ -69,8 +64,8 @@ const Post = ({ post}) => {
         </div>
 
         <div className="text-[12px] text-gray-500 font-medium flex items-center gap-1">
-          {post.reactions} <AiFillLike className="text-blue-500" />
-        </div>
+          {post.reactions.likes} <AiFillLike className="text-blue-500" />
+       </div>
       </div>
     </div>
   );
