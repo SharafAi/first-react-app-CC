@@ -1,0 +1,28 @@
+/* Keeps spinner centered without affecting footer */
+.wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+
+ 
+  margin-top: 30vh; 
+  margin-bottom: 50vh;
+}
+
+/* Bigger spinner */
+.spinner {
+  width: 60px;
+  height: 60px;
+  border: 6px solid #e5e7eb;
+  border-top-color: #3b82f6;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
